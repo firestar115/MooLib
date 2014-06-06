@@ -2,6 +2,7 @@ package com.otabi.firestar.moolib;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -28,6 +29,22 @@ public class MooLibPlugin extends JavaPlugin {
 						+ "M" + ChatColor.GRAY + "o" + ChatColor.WHITE + "o"
 						+ ChatColor.RED + "Lib" + ChatColor.GRAY + "] "
 						+ ChatColor.YELLOW + message + ChatColor.WHITE));
+	}
+
+	public static void playerMessage(Player player, String message) {
+		player.sendMessage(ChatColor.GRAY + "[" + ChatColor.WHITE + "M"
+				+ ChatColor.GRAY + "o" + ChatColor.WHITE + "o" + ChatColor.RED
+				+ "Lib" + ChatColor.GRAY + "] " + ChatColor.YELLOW + message
+				+ ChatColor.WHITE);
+	}
+
+	public static void broadcast(String message) {
+		for (Player p : Bukkit.getOnlinePlayers()) {
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.WHITE + "M"
+					+ ChatColor.GRAY + "o" + ChatColor.WHITE + "o"
+					+ ChatColor.RED + "Lib" + ChatColor.GRAY + "] "
+					+ ChatColor.YELLOW + message + ChatColor.WHITE);
+		}
 	}
 
 }

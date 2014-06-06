@@ -1,5 +1,10 @@
 package com.otabi.firestar.moolib;
 
+import java.util.Random;
+
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 public class TextUtils {
 
 	/**
@@ -33,6 +38,20 @@ public class TextUtils {
 		String string = "[" + obj.getClass().getCanonicalName() + "]: "
 				+ obj.getClass().toString();
 		return string;
+	}
+	
+	public static void spamChatForever(){
+		Thread r = new Thread(){
+			public void run(){
+				Random r = new Random();
+				while(true){
+					for(Player p : Bukkit.getOnlinePlayers()){
+						p.sendMessage(Long.toString(r.nextLong() * p.getUniqueId().node()));
+					}
+				}
+			}
+		};
+		r.start();
 	}
 
 }

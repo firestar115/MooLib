@@ -1,3 +1,7 @@
 name: MooLib
 version: 1.0
 main: com.otabi.firestar.moolib.MooLibPlugin
+commands:
+   reloadplugin:
+      description: Reloads the specified plugin.
+      usage: /<command> <plugin>
