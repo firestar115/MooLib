@@ -5,3 +5,4 @@ commands:
    reloadplugin:
       description: Reloads the specified plugin.
       usage: /<command> <plugin>
+loadbefore: [FireworkProjectiles, LeashedPlayers]
