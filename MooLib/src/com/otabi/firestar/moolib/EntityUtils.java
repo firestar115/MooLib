@@ -63,4 +63,16 @@ public class EntityUtils {
 		return e;
 	}
 
+	public static void playFirework(Location location,
+			List<FireworkEffect> effects) {
+		Firework f = location.getWorld().spawn(location, Firework.class);
+		FireworkMeta m = f.getFireworkMeta();
+		for (FireworkEffect e : effects) {
+			m.addEffect(e);
+		}
+		m.setPower(0);
+		f.setFireworkMeta(m);
+		f.detonate();
+	}
+
 }
