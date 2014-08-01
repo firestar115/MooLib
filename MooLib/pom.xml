@@ -17,7 +17,8 @@
         </configuration>
       </plugin>
     </plugins>
-    <repositories>
+  </build>
+  <repositories>
       <repository>
           <id>bukkit-repo</id>
           <url>http://repo.bukkit.org/content/groups/public/</url>
@@ -30,5 +31,4 @@
           <version>LATEST</version>
       </dependency>
   </dependencies>
-  </build>
 </project>
