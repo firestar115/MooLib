@@ -1,6 +1,6 @@
-name: MooLib
-version: 1.0
-main: com.otabi.firestar.moolib.MooLibPlugin
+name: ${name}
+version: ${version}
+main: ${groupId}.${artifactId}
 commands:
    reloadplugin:
       description: Reloads the specified plugin.
