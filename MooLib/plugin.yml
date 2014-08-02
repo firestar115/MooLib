@@ -1,8 +1,8 @@
-name: ${name}
+name: ${artifactId}
 version: ${version}
 main: ${groupId}.${artifactId}
 commands:
    reloadplugin:
       description: Reloads the specified plugin.
       usage: /<command> <plugin>
-loadbefore: [FireworkProjectiles, LeashedPlayers, NyanCat]
+loadbefore: [FireworkProjectiles, LeashedPlayers]
